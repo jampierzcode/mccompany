@@ -1,8 +1,7 @@
 import React from "react";
 import { Carousel, Container, Row, Col } from "react-bootstrap";
 // iconos
-import {FiChevronsRight} from "react-icons/fi"
-
+import { FiChevronsRight } from "react-icons/fi";
 
 import "aos/dist/aos.css";
 import "../css/home.css";
@@ -26,11 +25,38 @@ const Home = () => {
       skills:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et non doloremque modi aperiam ea libero dicta omnis eos repudiandae id? Nostrum eius dolorum maiores excepturi illum aperiam error cum adipisci.",
       animation: "fade-right",
-      position_reverse: "row_invert_h",
+      position_reverse: "false",
+    },
+  ];
+  const servicios_info = [
+    {
+      id: 1,
+      nombre: "MC Marketing digital",
+      img: "https://d3nqlc6zkdn9bc.cloudfront.net/wp-content/uploads/2022/05/30181901/Marketing-digital-jelpit-abc-compressed.jpg",
+      skills:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et non doloremque modi aperiam ea libero dicta omnis eos repudiandae id? Nostrum eius dolorum maiores excepturi illum aperiam error cum adipisci.",
+      animation: "fade-up",
+    },
+    {
+      id: 2,
+      nombre: "MC Real State",
+      img: "https://blog.hubspot.com/hubfs/Sales_Blog/real-estate-business-compressor.jpg",
+      skills:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et non doloremque modi aperiam ea libero dicta omnis eos repudiandae id? Nostrum eius dolorum maiores excepturi illum aperiam error cum adipisci.",
+      animation: "fade-down",
+    },
+    {
+      id: 3,
+      nombre: "MC Businees School",
+      img: "http://www.aspirebarcelona.eu/assets/images/blog/european-program.jpg",
+      skills:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et non doloremque modi aperiam ea libero dicta omnis eos repudiandae id? Nostrum eius dolorum maiores excepturi illum aperiam error cum adipisci.",
+      animation: "fade-up",
     },
   ];
   return (
     <>
+      {/* CARRUSEL */}
       <Carousel variant="dark" className="slide_portada_home">
         <Carousel.Item className="item-carrusel">
           <img
@@ -68,23 +94,71 @@ const Home = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      {/* SECTION DE NOSOTROS */}
       <Container className="container_mc">
-        <h1 className="index_section_mcs">Nosotros</h1>
+        <div className="shape"></div>
+        <div className="header_section">
+          <h1 className="index_section_mcs">Nosotros</h1>
+        </div>
         {agentes_info.map((item) => {
           return (
-            <Row className={item.position_reverse + "row_mc"}>
-              <Col data-aos={item.animation} xs="6" className="flex_h hh_flex col_mc">
-                <img className="img_circle" width={"100%"} src={item.img} alt="" />
+            <Row
+              className={
+                item.position_reverse !== "false"
+                  ? item.position_reverse + " row_mc"
+                  : " "
+              }
+            >
+              <Col
+                sm
+                data-aos={item.animation}
+                className="flex_h hh_flex "
+              >
+                <img
+                  className="img_circle"
+                  width={"100%"}
+                  src={item.img}
+                  alt=""
+                />
               </Col>
-              <Col xs="6" className=" flex_h hv_flex col_mc">
+              <Col sm className=" flex_h hv_flex ">
                 <h2>{item.nombre}</h2>
                 <span className="sub_title">Agente Inmobiliario</span>
                 <p className="description_context">{item.skills}</p>
-                <button className="btn_mc btn_primary hover_up">Ver Proyectos <FiChevronsRight/></button>
+                <button className="btn_mc btn_primary hover_up">
+                  Ver Proyectos <FiChevronsRight />
+                </button>
               </Col>
             </Row>
           );
         })}
+      </Container>
+      {/* SECTION DE SERVICIOS */}
+      <Container className="container_mc">
+        <div className="header_section">
+          <h1 className="index_section_mcs">Nuestros servicios</h1>
+        </div>
+        <Row className="carrusel_card">
+          {servicios_info.map((item) => {
+            return (
+              <Col data-aos={item.animation}
+              data-aos-duration="500"
+                sm md
+                // data-aos={item.animation}
+                className="card_item_mc"
+              >
+                <img className="img_card" width={"100%"} src={item.img} alt="" />
+                <div className="card_body_item">
+                  <h2>{item.nombre}</h2>
+                  <p className="description_card">{item.skills}</p>
+                  <button className="btn_mc btn_primary hover_up">
+                    Ver Servicio <FiChevronsRight />
+                  </button>
+                </div>
+              </Col>
+            );
+          })}
+        </Row>
       </Container>
     </>
   );

@@ -41,4 +41,9 @@ position: relative;
 }
 .container_mc .row{
     margin-top: 40px;
+    padding: 20px;
+    overflow: hidden;
+}
+.container_mc .row .col_mc:nth-child(2){
+    margin-top: 40px;
 }

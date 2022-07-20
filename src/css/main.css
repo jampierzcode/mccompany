@@ -1,6 +1,14 @@
 /* fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100&display=swap');
 
+:root {
+    --primary-color: #5bb462;
+    --primary-dark: #000000;
+    --secondary-color: #ffea00;
+    --secondary-dark:#e3d002;
+    --overlay: rgba(0,0,0,.7);
+  }
+
 *{
     margin: 0;
     padding: 0;
@@ -10,6 +18,37 @@ body{
     font-family: 'Raleway', sans-serif !important;
 }
 
+
+a{
+    text-decoration: none !important;
+}
+li{
+    list-style: none;
+}
+h1{
+    font-size: 45px !important;
+}
+h2{
+    font-size: 28px !important;
+}
+h3{
+    font-size: 18px !important;
+}
+h4{
+    font-size: 14px !important;
+}
+button.mc-btn{
+    padding: 12px 24px;
+    border-style: none;
+    display: inline-flex;
+    width: max-content;
+    border-radius: 4px;
+}
+
+.bg-primario{
+    background-color: var(--primary-dark);    
+    color: #fff;
+}
 
 /* CSS GENERALES DE MAQUETADO */
 .container_mc{
@@ -35,7 +74,7 @@ body{
     transform: translateY(-50%);
     width: 80px;
     height: 3px;
-    background-color: black;
+    background-color: #ffbb00;
     z-index: -1;
 }
 .index_section_mcs::before{
@@ -46,7 +85,7 @@ body{
     transform: translateY(-50%);
     width: 80px;
     height: 3px;
-    background-color: black;
+    background-color: #ffbb00;
     z-index: -1;
 }
 /* cuando hay una caja y adentro informacion */

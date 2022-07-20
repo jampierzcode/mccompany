@@ -1,11 +1,25 @@
-import React from "react";
-import { Carousel, Container, Row, Col } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import Hero from "./Hero";
 // iconos
 import { FiChevronsRight } from "react-icons/fi";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import "aos/dist/aos.css";
 import "../css/home.css";
 import Aos from "aos";
+
+// Import Swiper styles
+// import "swiper/";
+// import "swiper/components/pagination/pagination.min.css";
+// import "swiper/components/navigation/navigation.min.css";
+
 const Home = () => {
   Aos.init({ offset: 20, mirror: true, duration: 1500 });
   const agentes_info = [
@@ -25,7 +39,7 @@ const Home = () => {
       skills:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et non doloremque modi aperiam ea libero dicta omnis eos repudiandae id? Nostrum eius dolorum maiores excepturi illum aperiam error cum adipisci.",
       animation: "fade-right",
-      position_reverse: "false",
+      position_reverse: "true",
     },
   ];
   const servicios_info = [
@@ -55,99 +69,66 @@ const Home = () => {
     },
   ];
   return (
-    <>
-      {/* CARRUSEL */}
-      <Carousel variant="dark" className="slide_portada_home">
-        <Carousel.Item className="item-carrusel">
-          <img
-            className="d-block w-100 img-slider"
-            src="http://static1.squarespace.com/static/54d262afe4b05051e74b5892/t/5c4904537924e8130fb6c415/1548289110941/building.jpg?format=1500w"
-            alt="First slide"
-          />
-          <Carousel.Caption className="description-slider">
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item className="item-carrusel">
-          <img
-            className="d-block w-100 img-slider"
-            src="https://inmobiliare.com/himalaya/wp-content/uploads/2020/12/Perspectiva-del-Real-Estate-para-los-siguientes-meses-inmobiliare-2.jpg"
-            alt="Second slide"
-          />
-          <Carousel.Caption className="description-slider">
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item className="item-carrusel">
-          <img
-            className="d-block w-100 img-slider"
-            src="https://www.colliers.com/-/media/images/colliers/unitedstates/national/optimized-landing-pages/home/04_homepage_propertiesbigimage_2480x1152.ashx?bid=f04193e616644a9ea9ca65ced711943e&h=1151&w=2480&hash=DF961DA669E63710F0BEF502C30AEBA7"
-            alt="Third slide"
-          />
-          <Carousel.Caption className="description-slider">
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+    <>      
+      <Hero />
       {/* SECTION DE NOSOTROS */}
-      <Container className="container_mc">
-        <div className="shape"></div>
+      <div id="nosotros" className="container_mc section_about">
         <div className="header_section">
           <h1 className="index_section_mcs">Nosotros</h1>
         </div>
         {agentes_info.map((item) => {
           return (
-            <Row
-              className={
-                item.position_reverse !== "false"
-                  ? item.position_reverse + " row_mc"
-                  : " "
-              }
-            >
-              <Col
-                sm
-                data-aos={item.animation}
-                className="flex_h hh_flex "
-              >
+            <Row className={item.position_reverse !== "false" ? "row_invert_v" : ""}>
+              <Col sm data-aos={item.animation} className="flex_h hh_flex ">
                 <img
                   className="img_circle"
                   width={"100%"}
                   src={item.img}
                   alt=""
                 />
+                <div>
+                  <h2>{item.nombre}</h2>
+                  <span className="sub_title">Agente Inmobiliario</span>
+                  <p className="description_context">{item.skills}</p>
+                  <button className="btn_mc btn_primary hover_up">
+                    Ver Proyectos <FiChevronsRight />
+                  </button>
+                </div>
               </Col>
-              <Col sm className=" flex_h hv_flex ">
+              {/* <Col sm className=" flex_h hv_flex ">
                 <h2>{item.nombre}</h2>
                 <span className="sub_title">Agente Inmobiliario</span>
                 <p className="description_context">{item.skills}</p>
                 <button className="btn_mc btn_primary hover_up">
                   Ver Proyectos <FiChevronsRight />
                 </button>
-              </Col>
+              </Col> */}
             </Row>
           );
         })}
-      </Container>
+      </div>
       {/* SECTION DE SERVICIOS */}
-      <Container className="container_mc">
+      <Container id="servicios" className="container_mc">
         <div className="header_section">
           <h1 className="index_section_mcs">Nuestros servicios</h1>
         </div>
         <Row className="carrusel_card">
           {servicios_info.map((item) => {
             return (
-              <Col data-aos={item.animation}
-              data-aos-duration="500"
-                sm md
+              <Col
+                data-aos={item.animation}
+                data-aos-duration="500"
+                sm
+                md
                 // data-aos={item.animation}
                 className="card_item_mc"
               >
-                <img className="img_card" width={"100%"} src={item.img} alt="" />
+                <img
+                  className="img_card"
+                  width={"100%"}
+                  src={item.img}
+                  alt=""
+                />
                 <div className="card_body_item">
                   <h2>{item.nombre}</h2>
                   <p className="description_card">{item.skills}</p>
@@ -159,6 +140,81 @@ const Home = () => {
             );
           })}
         </Row>
+      </Container>
+      {/* SECTION DE AGENTES */}
+      <Container id="agentes" className="container_mc">
+        <div className="header_section">
+          <h1 className="index_section_mcs">Agentes</h1>
+        </div>
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          pagination={{ clickable: true }}
+          navigation={true}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            600: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            940: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+          }}
+          // scrollbar={{ draggable: true }}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+        >
+          <SwiperSlide>
+            <img
+              src="https://www.aprendemas.com/es/blog/images/2019/05/agente_inmobiliario.jpeg"
+              alt=""
+            />
+            <div className="agent-title">
+              <p>Nombre del agente</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://www.aprendemas.com/es/blog/images/2019/05/agente_inmobiliario.jpeg"
+              alt=""
+            />
+            <div className="agent-title">
+              <p>Nombre del agente</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://www.aprendemas.com/es/blog/images/2019/05/agente_inmobiliario.jpeg"
+              alt=""
+            />
+            <div className="agent-title">
+              <p>Nombre del agente</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://www.aprendemas.com/es/blog/images/2019/05/agente_inmobiliario.jpeg"
+              alt=""
+            />
+            <div className="agent-title">
+              <p>Nombre del agente</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://www.aprendemas.com/es/blog/images/2019/05/agente_inmobiliario.jpeg"
+              alt=""
+            />
+            <div className="agent-title">
+              <p>Nombre del agente</p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </Container>
     </>
   );

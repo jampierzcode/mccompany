@@ -40,10 +40,58 @@ z-index: 1500;
 position: relative;
 }
 .container_mc .row{
+    width: 100%;
     margin-top: 40px;
     padding: 20px;
     overflow: hidden;
 }
 .container_mc .row .col_mc:nth-child(2){
     margin-top: 40px;
+}
+
+/* sections styles */
+
+/* serction about */
+.section_about{
+    background-color: #F7F7F7 ;
+    z-index: -1;
+    position: relative;
+}
+.section_about .row{
+    justify-content: center;
+}
+.section_about .row .col-sm{
+    gap: 40px;
+    max-width: 1240px;
+    margin: auto;
+}
+
+
+/* section agentes */
+/* ---AGENTES SLIDE WITH SWIPER JS---- */
+.swiper-slide img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+
+}
+.swiper-slide .agent-title{
+    width: 80%;
+    margin: auto;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.swiper-slide .agent-title>p{
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: -50px;
+    font-size: 14px;
+
 }

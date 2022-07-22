@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import portada from "../assets/hero.jpg";
+import portada from "../../assets/hero.jpg";
 const Hero = () => {
   return (
     // <div className='hero'>

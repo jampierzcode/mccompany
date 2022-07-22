@@ -21,6 +21,7 @@ body{
 
 a{
     text-decoration: none !important;
+    cursor: pointer;
 }
 li{
     list-style: none;
@@ -75,7 +76,6 @@ button.mc-btn{
     width: 80px;
     height: 3px;
     background-color: #ffbb00;
-    z-index: -1;
 }
 .index_section_mcs::before{
     content: "";
@@ -86,7 +86,6 @@ button.mc-btn{
     width: 80px;
     height: 3px;
     background-color: #ffbb00;
-    z-index: -1;
 }
 /* cuando hay una caja y adentro informacion */
 .sub_title{
@@ -133,16 +132,24 @@ button.mc-btn{
 
 /* buttons, a, href */
 .btn_mc{
-    padding: 12px 24px;
+    margin-top: 20px;
     border: 0;
-    border-radius: 30px;
+    border-radius: 30px;overflow: hidden;
+}
+.btn_mc>a{
+    padding: 12px 24px;
     display: inline-flex !important;
     width: max-content;
-    gap: 20px;
     align-items: center;
-    margin-top: 20px;
     transform: translateY(0);
     transition: all 0.25s;
+    color: #fff;
+}
+.btn_mc>a:hover{
+    color: #fff;
+}
+.hover_up{
+    transition: all 0.5s;
 }
 .hover_up:hover{
     transform: translateY(-10px);

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Hero from "./Hero";
+import { Outlet, Link } from "react-router-dom";
+import Hero from "../components/HomeMc/Hero";
 // iconos
 import { FiChevronsRight } from "react-icons/fi";
 
@@ -11,16 +12,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+
+// import aos
 import "aos/dist/aos.css";
 import "../css/home.css";
 import Aos from "aos";
 
-// Import Swiper styles
-// import "swiper/";
-// import "swiper/components/pagination/pagination.min.css";
-// import "swiper/components/navigation/navigation.min.css";
-
-const Home = () => {
+const HomeMc = () => {
   Aos.init({ offset: 20, mirror: true, duration: 1500 });
   const agentes_info = [
     {
@@ -46,6 +44,7 @@ const Home = () => {
     {
       id: 1,
       nombre: "MC Marketing digital",
+      path: "servicios/marketing",
       img: "https://d3nqlc6zkdn9bc.cloudfront.net/wp-content/uploads/2022/05/30181901/Marketing-digital-jelpit-abc-compressed.jpg",
       skills:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et non doloremque modi aperiam ea libero dicta omnis eos repudiandae id? Nostrum eius dolorum maiores excepturi illum aperiam error cum adipisci.",
@@ -54,6 +53,7 @@ const Home = () => {
     {
       id: 2,
       nombre: "MC Real State",
+      path: "servicios/real_state",
       img: "https://blog.hubspot.com/hubfs/Sales_Blog/real-estate-business-compressor.jpg",
       skills:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et non doloremque modi aperiam ea libero dicta omnis eos repudiandae id? Nostrum eius dolorum maiores excepturi illum aperiam error cum adipisci.",
@@ -62,6 +62,7 @@ const Home = () => {
     {
       id: 3,
       nombre: "MC Businees School",
+      path: "servicios/business_scholl",
       img: "http://www.aspirebarcelona.eu/assets/images/blog/european-program.jpg",
       skills:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et non doloremque modi aperiam ea libero dicta omnis eos repudiandae id? Nostrum eius dolorum maiores excepturi illum aperiam error cum adipisci.",
@@ -69,7 +70,7 @@ const Home = () => {
     },
   ];
   return (
-    <>      
+    <div className="mc-page">      
       <Hero />
       {/* SECTION DE NOSOTROS */}
       <div id="nosotros" className="container_mc section_about">
@@ -91,7 +92,7 @@ const Home = () => {
                   <span className="sub_title">Agente Inmobiliario</span>
                   <p className="description_context">{item.skills}</p>
                   <button className="btn_mc btn_primary hover_up">
-                    Ver Proyectos <FiChevronsRight />
+                    <a href="#">Ver Proyectos <FiChevronsRight /></a> 
                   </button>
                 </div>
               </Col>
@@ -133,18 +134,19 @@ const Home = () => {
                   <h2>{item.nombre}</h2>
                   <p className="description_card">{item.skills}</p>
                   <button className="btn_mc btn_primary hover_up">
-                    Ver Servicio <FiChevronsRight />
+                    <Link to={item.path}>Ver Servicio <FiChevronsRight /></Link>
                   </button>
                 </div>
               </Col>
             );
           })}
+          {/* <Outlet /> */}
         </Row>
       </Container>
       {/* SECTION DE AGENTES */}
-      <Container id="agentes" className="container_mc">
+      <Container id="equipo" className="container_mc">
         <div className="header_section">
-          <h1 className="index_section_mcs">Agentes</h1>
+          <h1 className="index_section_mcs">Nuestro Equipo</h1>
         </div>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -175,7 +177,34 @@ const Home = () => {
               alt=""
             />
             <div className="agent-title">
-              <p>Nombre del agente</p>
+              <p>Nombre...</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://assets.iproup.com/cdn-cgi/image/w=880,f=webp/https://assets.iproup.com/assets/jpg/2020/06/10195.jpg"
+              alt=""
+            />
+            <div className="agent-title">
+              <p>Nombre...</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://coachricardogarza.com/wp-content/uploads/2021/07/empresario-ayuda-min-1280x720.jpg"
+              alt=""
+            />
+            <div className="agent-title">
+              <p>Nombre...</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://www.1001propiedades.com/wp-content/uploads/2020/04/que-necesitas-para-ser-corredor-inmobiliario.jpg"
+              alt=""
+            />
+            <div className="agent-title">
+              <p>Nombre...</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -184,40 +213,13 @@ const Home = () => {
               alt=""
             />
             <div className="agent-title">
-              <p>Nombre del agente</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="https://www.aprendemas.com/es/blog/images/2019/05/agente_inmobiliario.jpeg"
-              alt=""
-            />
-            <div className="agent-title">
-              <p>Nombre del agente</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="https://www.aprendemas.com/es/blog/images/2019/05/agente_inmobiliario.jpeg"
-              alt=""
-            />
-            <div className="agent-title">
-              <p>Nombre del agente</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="https://www.aprendemas.com/es/blog/images/2019/05/agente_inmobiliario.jpeg"
-              alt=""
-            />
-            <div className="agent-title">
-              <p>Nombre del agente</p>
+              <p>Nombre...</p>
             </div>
           </SwiperSlide>
         </Swiper>
       </Container>
-    </>
+    </div>
   );
 };
 
-export default Home;
+export default HomeMc;

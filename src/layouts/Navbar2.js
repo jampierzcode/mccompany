@@ -6,7 +6,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo.png";
 import "../components/HomeMc/Navbar.css";
 
-const NavbarExample = () => {
+const Navbar2Example = () => {
 
   // setting mobile nav
   const [click, setClick] = useState(false);
@@ -28,21 +28,21 @@ window.addEventListener('scroll', changeColor)
 
   return (
     <>
-      <div className={color ? "header header-bg": "header"}>
+      <div className={color ? "header header-bg": "header header-real-state"}>
         <nav className="navbar">
           <Link to="/" className="logo">
             <img src={logo} alt="logo" />
           </Link>
           <div className="hamburger" onClick={handleClick}>
             {click ? (
-              <FaTimes size={30} style={{ color: "#ffffff" }} />
+              <FaTimes size={30} style={{ color: "#000" }} />
             ) : (
               <FaBars size={30} style={{ color: "#ffffff" }} />
             )}
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link to="/" onClick={closeMenu}>
+              <Link to="/servicios/real_state" onClick={closeMenu}>
                 Home
               </Link>
             </li>
@@ -58,7 +58,7 @@ window.addEventListener('scroll', changeColor)
             </li>
             <li className="nav-item">
               <a href="#equipo" onClick={closeMenu}>
-                Equipo
+                hola
               </a>
             </li>
           </ul>
@@ -71,4 +71,4 @@ window.addEventListener('scroll', changeColor)
   );
 };
 
-export default NavbarExample;
+export default Navbar2Example;

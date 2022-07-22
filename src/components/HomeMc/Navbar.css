@@ -8,6 +8,9 @@
     transition: .3s ease-in;
     overflow: hidden;
 }
+.header-real-state{
+    background-color: #000;
+}
 .header-bg{
 
     background-color: rgb(0, 0, 0);
@@ -89,19 +92,3 @@
         width: 150px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

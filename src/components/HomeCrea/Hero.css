@@ -1,0 +1,103 @@
+.back-slider{
+    position: absolute;
+    background: rgb(71,32,145);
+background: linear-gradient(146deg, rgba(71,32,145,1) 20%, rgba(209,45,69,1) 80%);
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.formulario_crea{
+    background-color: #251f40;
+    overflow: hidden;
+    backdrop-filter: blur(18px);
+    border-radius: 20px;
+    bottom: 0;
+    max-width: 450px;
+    padding: 40px 42px;
+    position: absolute;
+    right: 1rem;
+    width: 100%;
+    z-index: 5;
+}
+.formulario_crea .header-form h1{
+    font-size: 25px !important;
+    font-weight: 500;
+    color: #fff;
+}
+.formulario_crea .body-form{
+    padding: 0px !important;
+}
+.formulario_crea .footer-form{
+    padding: 0px !important;
+}
+.formulario_crea .body-form>*{
+    margin-top: 12px;
+}
+.formulario_crea .footer-form>*{
+    margin-top: 12px;
+}
+.form-check-label{
+    color: #fff;
+}
+.input-form, .select-form{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 1rem;
+    padding: 1rem 0;
+    position: relative;
+    font-size: 14px;
+    width: 100%;
+}
+.line{
+    background-color: #adadad;
+    display: block;
+    height: 1px;
+    position: relative;
+    width: 100%;
+}
+.line::after{
+    background: linear-gradient(96deg, #4715ff 0,#ff007a  100%);
+    content: "";
+    height: 1px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transform: translateY(5px);
+    transition: .2s linear;
+    width: 100%;
+}
+.crea-button{
+    background: linear-gradient(96deg,#4715ff 0,#ff007a 100%);
+    border-radius: 26px !important;
+    color: #fff !important;
+    display: inline-block;
+    font-family: Poppins;
+    font-size: .9rem;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    transition: .25s linear;
+}
+.crea-slider-mask{
+    background-image: url("https://agenciamalcolm.pe/wp-content/themes/malcolm/assets/gfx/webp/animation-mask.svg");
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    content: "";
+    z-index: 3000;
+    height: 100%;
+}
+.crea-form-shadow{
+    filter: drop-shadow(7px 7px 25px rgba(0,0,0,.25));
+    margin-bottom: 50px;
+}

@@ -1,0 +1,198 @@
+.section-crea h1 {
+  font-size: 48px;
+  font-weight: 700 !important;
+  margin-bottom: 0.5rem !important;
+}
+.section-crea h2 {
+  font-size: 1.5rem !important;
+  font-weight: 500 !important;
+  margin-bottom: 0.5rem !important;
+}
+.section-crea p {
+  margin-bottom: 1rem !important;
+}
+
+.hero .row {
+  max-width: 1320px !important;
+}
+.container-crea {
+  max-width: 1320px !important;
+  margin: 0 auto !important;
+  padding: 0px 40px;
+}
+.section-crea {
+  padding: 120px 0px;
+  background-color: #f2f2f2;
+}
+.index-section-name {
+  font-size: calc(2rem + 1.2vw) !important;
+  font-weight: 700 !important;
+  color: rgb(60 60 60);
+}
+.subindex-section-name {
+  font-size: 1.5rem !important;
+  font-weight: 400 !important;
+}
+.section-crea img {
+  width: 100% !important;
+}
+.text-crea-comment {
+  font-style: italic;
+}
+
+.box-marca-crea {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px 40px;
+  box-shadow: 0 4px 20px rgb(82 70 151 / 12%);
+}
+.crea-mansory {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+}
+.crea-mansory .mansory-item {
+  display: block;
+  margin: 0 0 12px 12px;
+  overflow: hidden;
+  position: relative;
+  background-color: #ececec;
+}
+.crea-mansory .mansory-item .bg{
+  height: 400px;
+  
+}
+.crea-mansory .mansory-item .bg img{
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  
+}
+.crea-mansory .mansory-item:nth-of-type(5n + 1) {
+  width: calc(25% - 8px);
+  margin-left: 0;
+}
+.crea-mansory .mansory-item:nth-of-type(5n + 2) {
+  width: calc(50% - 8px);
+}
+.crea-mansory .mansory-item:nth-of-type(5n + 3) {
+  width: calc(25% - 8px);
+}
+.crea-mansory .mansory-item:nth-of-type(5n + 4) {
+  margin-left: 0;
+  width: calc(50% - 8px);
+}
+.crea-mansory .mansory-item:nth-of-type(5n + 5) {
+  width: calc(50% - 8px);
+}
+.crea-mansory .mansory-item:nth-of-type(5n + 6) {
+  width: calc(25% - 8px);
+}
+
+/* swiper css */
+.swiper-about-crea{
+    margin-top: 40px;
+    height: 400px;
+}
+.swiper-about-crea .swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+
+}
+.content-history-card{
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgb(82 70 151 / 12%);
+    color: #5b5b5b;
+    width: 80%;
+    font-size: 28px;
+    /* max-width: 400px; */
+}
+.acordeon-crea{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 60px;
+  padding: 0px !important;
+}
+.acordeon-crea .item-acordion-crea{
+  width: 100%;
+  overflow: hidden;
+}
+.acordeon-crea .item-acordion-crea.item-acordion-crea.active-acordeon{
+  background-color: #ececec;
+}
+.acordeon-crea .item-acordion-crea .header-acordion{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgb(82 70 151 / 12%);
+  padding: 15px 25px;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+.acordeon-crea .item-acordion-crea .header-acordion::after{
+  content: "-";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.acordeon-crea .item-acordion-crea.active-acordeon .header-acordion::after{
+  content: "+";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.acordeon-crea .item-acordion-crea .text-content-ac{
+  height: 0;
+  padding: 0 25px;
+  margin: 0 !important;
+  transition: all 0.5s;
+}
+.acordeon-crea .item-acordion-crea.item-acordion-crea.active-acordeon .text-content-ac{
+  height: auto;
+  padding: 15px 25px;
+}
+
+
+@media (max-width: 992px) {
+  .crea-mansory .mansory-item {
+    margin-left: 0;
+    padding-top: 90%;
+  }
+
+  .crea-mansory .mansory-item:nth-of-type(5n + 1) {
+    width: 100%;
+    margin-left: 0;
+  }
+  .crea-mansory .mansory-item:nth-of-type(5n + 2) {
+    width: 100%;
+  }
+  .crea-mansory .mansory-item:nth-of-type(5n + 3) {
+    width: 100%;
+  }
+  .crea-mansory .mansory-item:nth-of-type(5n + 4) {
+    margin-left: 0;
+    width: 100%;
+  }
+  .crea-mansory .mansory-item:nth-of-type(5n + 5) {
+    width: 100%;
+  }
+  .crea-mansory .mansory-item:nth-of-type(5n + 6) {
+    width: 100%;
+  }
+}
+

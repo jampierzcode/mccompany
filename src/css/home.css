@@ -1,0 +1,120 @@
+.slide_portada_home{
+    width: 100%;
+    height: 80vh;
+}
+.carousel-inner{
+    height: 100%;
+}
+.carousel-indicators button{
+    background-color: #fff !important;
+}
+.item-carrusel{
+    height: 100% !important;
+}
+.carousel-control-next span{
+    color: #fff !important;
+}
+.slide_portada_home::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.8;
+}
+.img-slider{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+}
+.description-slider h3{
+color: #fff;
+z-index: 1500;
+position: relative;
+}
+.description-slider p{
+color: #fff;
+z-index: 1500;
+position: relative;
+}
+.mc-page .container_mc .row{
+    overflow: hidden;
+}
+
+/* sections styles */
+
+/* serction about */
+.section_about{
+    background-color: #fff ;
+    position: relative;
+}
+.section_about .row{
+    max-width: 1240px;
+    margin: auto;
+}
+.section_about .row .col-sm{
+    gap: 40px;
+}
+.content-about{
+    padding-left: 30px;
+    align-content: center;
+}
+
+/* section agentes */
+/* ---AGENTES SLIDE WITH SWIPER JS---- */
+#equipo .swiper-slide{
+    overflow: hidden;
+}
+#equipo .swiper-slide img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: left;
+    transition: transform 0.9s;
+    /* transition: filter 0.5s; */
+    filter: grayscale(1);
+}
+#equipo .swiper-slide:hover img{
+    filter: grayscale(0);
+    transform: scale(1.2);
+}
+#equipo .swiper-slide .agent-title{
+    width: 80%;  
+    margin: auto;  
+    margin-top: -50px;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+.swiper-slide .agent-title>p{
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-bottom: 0 !important;
+
+}
+.img-container{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width: 600px) {
+    .content-about{
+        padding: 0px;
+        margin-top: 30px;
+    }
+    .block-spacing{
+        padding: 0px !important;
+    }
+    .carrusel_card{
+        padding: 2px !important;
+    }
+}

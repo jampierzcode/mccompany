@@ -1,0 +1,189 @@
+/* .header{
+  position: relative;
+  background-color: #075c6c !important;
+} */
+.portada-realState-property  .content-portada h1, .portada-realState-property .content-portada p, .portada-realState-property .content-portada h3{
+text-align: center;
+}
+.portada-property{
+  position: relative;
+  background-image: url();
+}
+.portada-title-property{
+  text-transform: uppercase;
+}
+.portada-precio-property{
+  font-weight: 600;
+  color: #b99379 !important;
+}
+.portada-realState-property.hero{
+  height: 600px !important;
+}
+.overlay-port-property{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: var(--bg-fuerte-rs) !important; */
+  background-color: #021c22 !important;
+  opacity: 0.85;
+  z-index: 1000;
+}
+.bac-img-property{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+.bac-img-property>img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 500;
+}
+.property-icons.portada-icons{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  /* background-color: var(--secundary-color-rs); */
+}
+.property-detail-portada{
+  position: relative;
+  z-index: 2000;
+}
+/* section-preview */
+.section-preview {
+  width: 100%;
+}
+.section-preview .row {
+  max-width: 1300px;
+  margin: auto;
+  gap: 80px;
+}
+.section-preview .row .col {
+  padding: 0px !important;
+}
+.zoom-gallery {
+  height: 600px;
+  margin-bottom: 40px;
+}
+.zoom-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb-gallery{
+    width: 100%;
+}
+
+.thumb-gallery img {
+  width: 100%;
+  object-fit: cover;
+  height: 100px;
+}
+.thumb-gallery .swiper-slide {
+  cursor: pointer;
+}
+.thumb-gallery .swiper-slide-thumb-active{
+  border: 2px solid #e1660f;
+}
+
+.thumb-gallery .swiper-button-prev, .thumb-gallery .swiper-button-next{
+    color: #fff;
+}
+
+.tag-detalle{
+    padding: 40px 0px;
+    border-top: 1px solid darkgrey;
+}
+.tag-detalle .box-detalle-tag{
+  background-color: #fff;
+  border: 1px solid darkgray;
+  padding: 10px;
+}
+.tag-detalle .box-detalle-tag .item-detalle{
+  display: flex;
+  gap: 5px;
+  font-size: 18px;
+}
+.tag-detalle .box-detalle-tag .item-detalle svg{
+  color: var(--bg-primary-rs);
+}
+
+.tag-detalle .index-detalle{
+  font-size: 25px !important;
+  font-weight: 600 !important;
+}
+.detail-property .title-property{
+  font-size: 25px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+}
+.detail-property .precio-property{
+  font-size: 30px !important;
+  font-weight: 400 !important;
+}
+.content-property{
+  padding-block: 30px;
+  margin: 0 !important;
+}
+
+
+.formulario-mc{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* box agent css */
+.box-agent-property{
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+.box-agent-property .header-box{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.box-agent-property .header-box>img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.box-agent-property .body-box>*{
+  color: #fff;
+  text-align: center;
+}
+.box-agent-property .bottom-box .btn-contact{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.box-agent-property .bottom-box .btn-contact>button.btn-contact-agent{
+  display: block;
+  text-align: center;
+  padding: 12px 24px;
+  border: none;
+  color: #fff;
+}
+.modal{
+  z-index: 3500 !important;
+}
+/* mapa custom */
+.google-contact iframe{
+  width: 100%;
+
+}

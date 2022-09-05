@@ -1,0 +1,76 @@
+.hero.portada-realState {
+    background-color: var(--overlay);
+    color: #fff;
+    height: 80vh;
+    width: 100%;
+    position: relative;
+}
+.form-search-property{
+    margin-top: 40px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding:  5px 20px;
+    color: #000 !important;
+    gap: 20px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+.form-search-property> .search-btn-property{
+    padding: 15px;
+    border-radius: 20px;
+}
+.form-search-property> .input-form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.form-search-property>  .input-form svg{    
+    display: block;
+    width: 40px;
+}
+.form-search-property>  .input-form input{    
+    width: 100%;
+    padding: 5px 20px;
+    border: none;
+}
+.form-search-property> button.search-btn-property{
+    width: 100px;
+    height: 100%;
+}
+.hero.portada-realState .row{
+    height: 600px;
+    align-items: flex-start;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+.hero.portada-realState .row img{
+    height: 100%;
+}
+#home-realstate{
+    overflow: visible !important;
+}
+
+
+/* box likes */
+
+.likes-comunity{
+    margin-top: 40px;
+    gap: 20px;
+}
+.box-likes h1{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+.box-likes .detail-like{
+    font-size: 12px;
+
+}
+
+

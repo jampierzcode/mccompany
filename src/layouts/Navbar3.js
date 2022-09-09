@@ -63,7 +63,7 @@ const Navbar3Example = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/servicios/crea/blog" onClick={closeMenu}>
+              <Link to="/servicios/crea/cursos" onClick={closeMenu}>
                 Cursos
               </Link>
             </li>

@@ -6,14 +6,21 @@ import "../css/homecrea.css";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// import aos
+import "aos/dist/aos.css";
+import "../css/home.css";
+import Aos from "aos";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-// import required modules
-import { Autoplay, Pagination, Navigation } from "swiper";
 
 // img about
 import port_about from "../components/HomeCrea/aboutcrea.png";
@@ -22,6 +29,10 @@ import { FiActivity } from "react-icons/fi";
 import Acordion from "../components/HomeCrea/Acordion";
 
 const HomeCrea = () => {
+// init data aos
+Aos.init({ offset: 20, mirror: true, duration: 400 });
+
+
   const container = useRef(null);
 
   useEffect(() => {
@@ -42,7 +53,7 @@ const HomeCrea = () => {
       <div className="section-crea">
         <div className="row container-crea">
           <div className="col-lg-6">
-            <h1 className="index-section-name">Sobre Crea </h1>
+            <h1 className="index-section-name" data-aos="fade-up">Sobre Crea </h1>
             <h2 className="subindex-section-name">
               Un gran equipo multidisciplinario
             </h2>
@@ -64,7 +75,7 @@ const HomeCrea = () => {
             </div>
           </div>
           <div className="col-lg-6">
-            <img src={port_about} alt="" />
+            <img src={port_about}  alt="" />
           </div>
         </div>
         {/* <div className="row container-crea">
@@ -152,7 +163,7 @@ const HomeCrea = () => {
                   <img src={require("../components/HomeCrea/portafolio/qhawana.png")} alt="" />
                 </div>
                 <div className="name">
-                  <h6>Name 01</h6>
+                  <h6>Proyecto Qhawana</h6>
                 </div>
               </a>
               <a href="#" className="mansory-item">
@@ -160,40 +171,92 @@ const HomeCrea = () => {
                   <img src={require("../components/HomeCrea/portafolio/amazoncargo.png")} alt="" />
                 </div>
                 <div className="name">
-                  <h6>Name 01</h6>
-                </div>
-              </a>
-              <a href="#" className="mansory-item">
-                <div className="bg"></div>
-                <div className="name">
-                  <h6>Name 01</h6>
-                </div>
-              </a>
-              <a href="#" className="mansory-item">
-                <div className="bg"></div>
-                <div className="name">
-                  <h6>Name 01</h6>
-                </div>
-              </a>
-              <a href="#" className="mansory-item">
-                <div className="bg"></div>
-                <div className="name">
-                  <h6>Name 01</h6>
-                </div>
-              </a>
-              <a href="#" className="mansory-item">
-                <div className="bg"></div>
-                <div className="name">
-                  <h6>Name 01</h6>
-                </div>
-              </a>
-              <a href="#" className="mansory-item">
-                <div className="bg"></div>
-                <div className="name">
-                  <h6>Name 01</h6>
+                  <h6>Sitio web de courier: Amazon Cargo</h6>
                 </div>
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="section-crea">
+        <div className="row container-crea">
+          <div className="col-lg-12">
+            <h1 className="index-section-name">Nuestro Equipo</h1>
+            <h2 className="subindex-section-name">
+              Conectamos personas con marcas a través de grandes experiencias
+              digitales.
+            </h2>
+          </div>
+          <div className="col-lg-12 pt-4">
+          <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          pagination={{ clickable: true }}
+          navigation={true}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            600: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            940: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+          }}
+          // scrollbar={{ draggable: true }}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+        >
+          <SwiperSlide>
+            <img
+              src="https://www.aprendemas.com/es/blog/images/2019/05/agente_inmobiliario.jpeg"
+              alt=""
+            />
+            <div className="agent-title">
+              <p>Nombre...</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://assets.iproup.com/cdn-cgi/image/w=880,f=webp/https://assets.iproup.com/assets/jpg/2020/06/10195.jpg"
+              alt=""
+            />
+            <div className="agent-title">
+              <p>Nombre...</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://coachricardogarza.com/wp-content/uploads/2021/07/empresario-ayuda-min-1280x720.jpg"
+              alt=""
+            />
+            <div className="agent-title">
+              <p>Nombre...</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://www.1001propiedades.com/wp-content/uploads/2020/04/que-necesitas-para-ser-corredor-inmobiliario.jpg"
+              alt=""
+            />
+            <div className="agent-title">
+              <p>Nombre...</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://www.aprendemas.com/es/blog/images/2019/05/agente_inmobiliario.jpeg"
+              alt=""
+            />
+            <div className="agent-title">
+              <p>Nombre...</p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
           </div>
         </div>
       </div>

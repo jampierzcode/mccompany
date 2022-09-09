@@ -10,8 +10,9 @@ import HomeBusinessScholl from "./pages/HomeBusinessScholl";
 import Propiedad from "./components/HomeRealState/Propiedad";
 import Wrapper from "./layouts/Wrapper";
 import HomeCrea from "./pages/HomeCrea";
-import Portafolio from "./components/HomeMc/Portafolio";
+import Portafolio from "./components/HomeCrea/Portafolio";
 import Blog from "./components/HomeMc/Blog";
+import Cursos from "./components/HomeCrea/Cursos";
 function App() {
   return (
     <>
@@ -33,6 +34,7 @@ function App() {
               <Route index element={<HomeCrea />} />
               <Route path="portafolio" element={<Portafolio />} />
               <Route path="blog" element={<Blog />} />
+              <Route path="cursos" element={<Cursos />} />
             </Route>
             <Route
               path="servicios/business_scholl"

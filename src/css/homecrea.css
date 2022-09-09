@@ -61,33 +61,40 @@
 }
 .crea-mansory .mansory-item .bg{
   height: 400px;
+  overflow: hidden;
+  position: relative;
   
 }
 .crea-mansory .mansory-item .bg img{
   height: 100%;
   object-fit: cover;
   object-position: top center;
+  transform: scale(1);
+  transition: all 0.5s;
   
 }
-.crea-mansory .mansory-item:nth-of-type(5n + 1) {
-  width: calc(25% - 8px);
-  margin-left: 0;
+.crea-mansory .name{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: max-content;
+  padding: 15px 15px;
+  z-index: 2000;
 }
-.crea-mansory .mansory-item:nth-of-type(5n + 2) {
-  width: calc(50% - 8px);
+.crea-mansory .mansory-item .bg::after {
+  background: linear-gradient(180deg,transparent,rgba(0,0,0,.7) 64.06%);
+  bottom: 0;
+  content: "";
+  height: 50%;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  left: 0;
+  right: 0;
 }
-.crea-mansory .mansory-item:nth-of-type(5n + 3) {
-  width: calc(25% - 8px);
-}
-.crea-mansory .mansory-item:nth-of-type(5n + 4) {
-  margin-left: 0;
-  width: calc(50% - 8px);
-}
-.crea-mansory .mansory-item:nth-of-type(5n + 5) {
-  width: calc(50% - 8px);
-}
-.crea-mansory .mansory-item:nth-of-type(5n + 6) {
-  width: calc(25% - 8px);
+.crea-mansory .mansory-item:hover .bg img{
+  transform: scale(1.05);
 }
 
 /* swiper css */

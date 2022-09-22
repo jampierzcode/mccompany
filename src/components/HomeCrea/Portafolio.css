@@ -1,0 +1,21 @@
+.header-nav{
+    padding: 90px 0px;
+}
+.listing-categories{
+    /* padding: 0; */
+}
+.list-category{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+}
+.list-category .item-category{
+    padding: 5px 20px;
+    background-color: #ececec !important;
+    border-radius: 15px;
+}
+.list-category .item-category.active-category{
+    background-color: #472091 !important;
+    color: #fff !important;
+}

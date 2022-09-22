@@ -27,6 +27,7 @@ import port_about from "../components/HomeCrea/aboutcrea.png";
 import help_crea from "../components/HomeCrea/help_crea-01.svg";
 import { FiActivity } from "react-icons/fi";
 import Acordion from "../components/HomeCrea/Acordion";
+import FooterCrea from "../components/HomeCrea/FooterCrea";
 
 const HomeCrea = () => {
 // init data aos
@@ -47,13 +48,14 @@ Aos.init({ offset: 20, mirror: true, duration: 400 });
 
   const [acordion, setAcordion] = useState("Crecimiento de Redes Sociales:");
 
+
   return (
     <>
-      <Hero />
-      <div className="section-crea">
+      <Hero/>
+      <div className="section-crea bg-section-crea">
         <div className="row container-crea">
-          <div className="col-lg-6">
-            <h1 className="index-section-name" data-aos="fade-up">Sobre Crea </h1>
+          <div className="col-lg-6 h-flex-crea-center-colum">
+            <h1 className="index-section-name" data-aos="fade-up">Sobre <b className="">Crea</b> </h1>
             <h2 className="subindex-section-name">
               Un gran equipo multidisciplinario
             </h2>
@@ -87,7 +89,7 @@ Aos.init({ offset: 20, mirror: true, duration: 400 });
       <div className="section-crea">
         <div className="row container-crea">
           <div className="col-lg-12">
-            <h1 className="index-section-name">Historia de Crea </h1>
+            <h1 className="index-section-name">Historia <b className="">de Crea</b> </h1>
             <div className="container-historia" ref={container}></div>
           </div>
         </div>
@@ -95,7 +97,7 @@ Aos.init({ offset: 20, mirror: true, duration: 400 });
       <div className="section-crea">
         <div className="row container-crea">
           <div className="col-lg-6">
-            <h1 className="index-section-name mt-3">¿Qué hacemos?</h1>
+            <h1 className="index-section-name mt-3">¿Qué <b className="">hacemos?</b></h1>
             <ul className="acordeon-crea">
               <Acordion
                 title="Crecimiento de Redes Sociales:"
@@ -150,7 +152,7 @@ Aos.init({ offset: 20, mirror: true, duration: 400 });
       <div className="section-crea">
         <div className="row container-crea">
           <div className="col-lg-12">
-            <h1 className="index-section-name">Nuestro Portafolio</h1>
+            <h1 className="index-section-name">Nuestro <b className="">Portafolio</b></h1>
             <h2 className="subindex-section-name">
               Conectamos personas con marcas a través de grandes experiencias
               digitales.
@@ -158,7 +160,7 @@ Aos.init({ offset: 20, mirror: true, duration: 400 });
           </div>
           <div className="col-lg-12 pt-4">
             <div className="crea-mansory">
-              <a target="_blank" href="http://ecovilla.mccompany.pe/" className="mansory-item">
+              <a target="_blank" href="https://inviersis.pe/qhawana" className="mansory-item">
                 <div className="bg">
                   <img src={require("../components/HomeCrea/portafolio/qhawana.png")} alt="" />
                 </div>
@@ -166,12 +168,20 @@ Aos.init({ offset: 20, mirror: true, duration: 400 });
                   <h6>Proyecto Qhawana</h6>
                 </div>
               </a>
-              <a href="#" className="mansory-item">
+              <a target="_blank" href="https://jtamazoncargo.com" className="mansory-item">
               <div className="bg">
                   <img src={require("../components/HomeCrea/portafolio/amazoncargo.png")} alt="" />
                 </div>
                 <div className="name">
                   <h6>Sitio web de courier: Amazon Cargo</h6>
+                </div>
+              </a>
+              <a target="_blank" href="https://hotelemperadortacna.com"className="mansory-item">
+              <div className="bg">
+                  <img src={require("../components/HomeCrea/portafolio/hotelemperador.png")} alt="" />
+                </div>
+                <div className="name">
+                  <h6>Sitio web hotel: Hotel emperador Tacna</h6>
                 </div>
               </a>
             </div>
@@ -181,14 +191,13 @@ Aos.init({ offset: 20, mirror: true, duration: 400 });
       <div className="section-crea">
         <div className="row container-crea">
           <div className="col-lg-12">
-            <h1 className="index-section-name">Nuestro Equipo</h1>
+            <h1 className="index-section-name">Conoce <b className="">al Equipo</b></h1>
             <h2 className="subindex-section-name">
-              Conectamos personas con marcas a través de grandes experiencias
-              digitales.
+              Nuestros Profesionales
             </h2>
           </div>
           <div className="col-lg-12 pt-4">
-          <Swiper
+          <Swiper className="equipo-listing-crea"
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
           pagination={{ clickable: true }}
@@ -207,59 +216,33 @@ Aos.init({ offset: 20, mirror: true, duration: 400 });
               spaceBetween: 30,
             },
           }}
-          // scrollbar={{ draggable: true }}
-          // onSlideChange={() => console.log("slide change")}
-          // onSwiper={(swiper) => console.log(swiper)}
         >
-          <SwiperSlide>
-            <img
-              src="https://www.aprendemas.com/es/blog/images/2019/05/agente_inmobiliario.jpeg"
-              alt=""
-            />
-            <div className="agent-title">
-              <p>Nombre...</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="https://assets.iproup.com/cdn-cgi/image/w=880,f=webp/https://assets.iproup.com/assets/jpg/2020/06/10195.jpg"
-              alt=""
-            />
-            <div className="agent-title">
-              <p>Nombre...</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
+          <SwiperSlide className="card-equipo-crea">
+            <img className="img-crea-equipo"
               src="https://coachricardogarza.com/wp-content/uploads/2021/07/empresario-ayuda-min-1280x720.jpg"
               alt=""
             />
-            <div className="agent-title">
-              <p>Nombre...</p>
+            <div className="agent-title-crea">
+              <p className="bold-text-card">Jampier Vasquez</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur voluptates porro aliquam.</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="https://www.1001propiedades.com/wp-content/uploads/2020/04/que-necesitas-para-ser-corredor-inmobiliario.jpg"
+          <SwiperSlide className="card-equipo-crea">
+            <img className="img-crea-equipo"
+              src="https://coachricardogarza.com/wp-content/uploads/2021/07/empresario-ayuda-min-1280x720.jpg"
               alt=""
             />
-            <div className="agent-title">
-              <p>Nombre...</p>
+            <div className="agent-title-crea">
+              <p className="bold-text-card">Maicol Bohorquez</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur voluptates porro aliquam.</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="https://www.aprendemas.com/es/blog/images/2019/05/agente_inmobiliario.jpeg"
-              alt=""
-            />
-            <div className="agent-title">
-              <p>Nombre...</p>
-            </div>
-          </SwiperSlide>
+          
         </Swiper>
           </div>
         </div>
       </div>
+      <FooterCrea/>
     </>
   );
 };

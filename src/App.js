@@ -13,6 +13,7 @@ import HomeCrea from "./pages/HomeCrea";
 import Portafolio from "./components/HomeCrea/Portafolio";
 import Blog from "./components/HomeMc/Blog";
 import Cursos from "./components/HomeCrea/Cursos";
+import FooterCrea from "./components/HomeCrea/FooterCrea";
 function App() {
   return (
     <>

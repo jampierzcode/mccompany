@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.568821e3.css",
+    "main.js": "/static/js/main.72a731c9.js",
+    "static/js/787.a38931a2.chunk.js": "/static/js/787.a38931a2.chunk.js",
+    "static/media/aboutcrea.png": "/static/media/aboutcrea.283134cea070514de0a3.png",
+    "static/media/equipo de trabajo.png": "/static/media/equipo de trabajo.ca9f12a955b5f3a56a52.png",
+    "static/media/3.jpeg": "/static/media/3.bb4bcca7763c7017a901.jpeg",
+    "static/media/2.jpeg": "/static/media/2.edeec50ea298d9250c45.jpeg",
+    "static/media/portada_mc2.png": "/static/media/portada_mc2.8ac707f9532fde3bb4c7.png",
+    "static/media/amazoncargo.png": "/static/media/amazoncargo.4130dc8d1a7df5ff6527.png",
+    "static/media/qhawana.png": "/static/media/qhawana.2d635cfe56c421eddc1f.png",
+    "static/media/6.jpeg": "/static/media/6.609417a95d752f94aba3.jpeg",
+    "static/media/4.jpeg": "/static/media/4.56fca609a31c82fb57a2.jpeg",
+    "static/media/8.jpeg": "/static/media/8.3d41f5d1f37043189df2.jpeg",
+    "static/media/7.jpeg": "/static/media/7.554f180cc420d3ac5bd2.jpeg",
+    "static/media/1.jpeg": "/static/media/1.80af0c9e6820fe978356.jpeg",
+    "static/media/11.jpeg": "/static/media/11.2d3ee385f74130f980e4.jpeg",
+    "static/media/banner depa.png": "/static/media/banner depa.8f1d1ba1091c993a2e0b.png",
+    "static/media/9.jpeg": "/static/media/9.4f9bc88a900b6e2c47c1.jpeg",
+    "static/media/5.jpeg": "/static/media/5.da8ad7dadcbb5735a2a5.jpeg",
+    "static/media/12.jpeg": "/static/media/12.49299aee846285ee32b5.jpeg",
+    "static/media/10.jpeg": "/static/media/10.1890a57942e5b19577b0.jpeg",
+    "static/media/logo_real_state.png": "/static/media/logo_real_state.07776049a1a8c67f14ca.png",
+    "static/media/logo.png": "/static/media/logo.8ab4db53db9b91e95cff.png",
+    "static/media/logo_creaq.png": "/static/media/logo_creaq.f782439a7a9bf4bc13d1.png",
+    "static/media/help_crea-01.svg": "/static/media/help_crea-01.ff50662842efa4ef6de359a76b4576ea.svg",
+    "index.html": "/index.html",
+    "main.568821e3.css.map": "/static/css/main.568821e3.css.map",
+    "main.72a731c9.js.map": "/static/js/main.72a731c9.js.map",
+    "787.a38931a2.chunk.js.map": "/static/js/787.a38931a2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.568821e3.css",
+    "static/js/main.72a731c9.js"
+  ]
+}

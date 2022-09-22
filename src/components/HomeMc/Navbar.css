@@ -19,6 +19,7 @@
 }
 .header-bg-crea{
     background-color: #fff !important;
+    box-shadow: 0px 4px 15px rgb(0 0 0 / 10%);
 }
 
 .header-bg-crea .nav-menu a{

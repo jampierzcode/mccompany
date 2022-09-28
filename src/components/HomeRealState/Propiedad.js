@@ -235,6 +235,9 @@ const Propiedad = () => {
             <div className="google-contact">
               <Mapa src={property_item.mapa} />
             </div>
+            <div>
+              <a className="btn btn-contact-agent bg-primary-rs" href={property_item.sitioweb} target="_blank">Ir al sitio web</a>
+            </div>
             {/* formulario de contacto de propiedad */}
           </Col>
         </Row>

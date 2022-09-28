@@ -69,7 +69,7 @@ const Hero = () => {
     if (response === "sucess") {
       var config = {
         method: "post",
-        url: "http://localhost/sendemail-mccompany-crea/sendemail.php",
+        url: "https://www.mccompany.pe/sendemail-mccompany-crea/sendemail.php",
         headers: {
           "Content-Type": "application/json",
         },

@@ -65,3 +65,13 @@
   border-radius: 20px;
   border: none;
 }
+@media (max-width: 600px) {
+  .footer-crea .container-crea{
+    gap: 20px;
+  }
+  .bar-bottom-footer{
+    margin-top: 20px;
+  }
+
+  
+}

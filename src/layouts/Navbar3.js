@@ -57,11 +57,11 @@ const Navbar3Example = () => {
                 Portafolio
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/servicios/crea/blog" onClick={closeMenu}>
                 Blog
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link to="/servicios/crea/cursos" onClick={closeMenu}>
                 Cursos

@@ -17,7 +17,7 @@ const FooterCrea = () => {
               src={require("../../assets/logo_creaq.png")}
               alt=""
             />
-            <h3 className="info-contact">Av. Bolognesi N~456</h3>
+            <h3 className="info-contact">Urbanizacion Miguel Grau calle Huascar 328</h3>
             <h3 className="info-contact">+51 946562325</h3>
             <h3 className="info-contact">crea@mccompany.pe</h3>
             <div className="redes-social">

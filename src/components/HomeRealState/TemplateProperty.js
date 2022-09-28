@@ -20,7 +20,8 @@ import proyectos_ba_12 from "../../assets/proyectos/proyecto-buenos-aires/12.jpe
   const TemplateProperty = [
     {
       id: 1,
-      mapa: "https://www.google.com/maps/d/embed?mid=1oGuQBNnrhaNFZyqZ3IVY8AfDRUEW3MY&ehbc=2E312F",
+      mapa: "https://www.google.com/maps/d/embed?mid=1XEV_SwOEmSbPyWwBz3pvmv8BdXGcwKQ&ehbc=2E312F",
+      sitioweb: "https://proyectobuenosaires.mccompany.pe/",
       type_property: "proyectos",
       ubicacion: "Proyecto Buenos Aires",
       slug: "proyecto-buenos-aires",

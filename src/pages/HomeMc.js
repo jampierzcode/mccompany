@@ -233,47 +233,38 @@ const HomeMc = () => {
         >
           <SwiperSlide>
             <img
-              src="https://www.aprendemas.com/es/blog/images/2019/05/agente_inmobiliario.jpeg"
+              src={require("../assets/equipomc/carmeluz.png")}
               alt=""
             />
             <div className="agent-title">
-              <p>Nombre...</p>
+              <p>Carmeluz Cohaila</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src="https://assets.iproup.com/cdn-cgi/image/w=880,f=webp/https://assets.iproup.com/assets/jpg/2020/06/10195.jpg"
+              src={require("../assets/equipomc/maicol.png")}
               alt=""
             />
             <div className="agent-title">
-              <p>Nombre...</p>
+              <p>Maciol Bohorquez</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src="https://coachricardogarza.com/wp-content/uploads/2021/07/empresario-ayuda-min-1280x720.jpg"
+              src={require("../assets/equipomc/jampier.png")}
               alt=""
             />
             <div className="agent-title">
-              <p>Nombre...</p>
+              <p>Jampier Vasquez</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src="https://www.1001propiedades.com/wp-content/uploads/2020/04/que-necesitas-para-ser-corredor-inmobiliario.jpg"
+              src={require("../assets/equipomc/alexis.png")}
               alt=""
             />
             <div className="agent-title">
-              <p>Nombre...</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="https://www.aprendemas.com/es/blog/images/2019/05/agente_inmobiliario.jpeg"
-              alt=""
-            />
-            <div className="agent-title">
-              <p>Nombre...</p>
+              <p>Alexis Illachura</p>
             </div>
           </SwiperSlide>
         </Swiper>

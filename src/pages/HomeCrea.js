@@ -219,22 +219,43 @@ Aos.init({ offset: 20, mirror: true, duration: 400 });
         >
           <SwiperSlide className="card-equipo-crea">
             <img className="img-crea-equipo"
-              src="https://coachricardogarza.com/wp-content/uploads/2021/07/empresario-ayuda-min-1280x720.jpg"
+              src={require("../assets/equipo/carmeluz.png")}
               alt=""
             />
             <div className="agent-title-crea">
-              <p className="bold-text-card">Jampier Vasquez</p>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur voluptates porro aliquam.</p>
+              <p className="bold-text-card"><b> Carmeluz Cohaila</b></p>
+              <p>Comunity Manager</p> 
             </div>
           </SwiperSlide>
           <SwiperSlide className="card-equipo-crea">
             <img className="img-crea-equipo"
-              src="https://coachricardogarza.com/wp-content/uploads/2021/07/empresario-ayuda-min-1280x720.jpg"
+              src={require("../assets/equipo/maicol.png")}
               alt=""
             />
             <div className="agent-title-crea">
-              <p className="bold-text-card">Maicol Bohorquez</p>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur voluptates porro aliquam.</p>
+              <p className="bold-text-card"><b> Maicol Bohorquez</b></p>
+              <p>Traficker Digital  Social Media Design</p> 
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="card-equipo-crea">
+            <img className="img-crea-equipo"
+              src={require("../assets/equipo/jampier.png")}
+              alt=""
+            />
+            <div className="agent-title-crea">
+              <p className="bold-text-card"><b> Jampier Vasquez</b></p>
+              <p>Diseñador de UI/UX, Desarrollador de Software, Diseñador Gráfico</p>
+            </div>
+          </SwiperSlide>
+          
+          <SwiperSlide className="card-equipo-crea">
+            <img className="img-crea-equipo"
+              src={require("../assets/equipo/alexis.png")}
+              alt=""
+            />
+            <div className="agent-title-crea">
+              <p className="bold-text-card"><b> Alexis Illachura</b></p>
+              <p>Diseñador Gráfico</p>
             </div>
           </SwiperSlide>
           
